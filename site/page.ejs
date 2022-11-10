@@ -9,7 +9,7 @@
 <!-- 📁 site/page.ejs -->
 <body>
     <% req = JSON.parse(req) %>
-    <% for(item of ["originalUrl", "subdomains", "baseUrl", "path", "hostname"]){ %> 
+    <% for(item of Object.keys(req)){ %> 
         <div><%= "req." + item + ": " + req[item] %></div>
     <% } %>
 </body>
